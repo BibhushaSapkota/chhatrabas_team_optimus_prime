@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+           hostel dashboard
+        </title>
+        <link rel="stylesheet" href="hostel.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            </head>
+        <script>
+                function openNav() {
+                  document.getElementById("mySidenav").style.width = "250px";
+                  document.getElementById("mySidenav").style.display = "block";
+                  document.getElementById("li").style.display = "none";
+                  
+                }
+                
+                function closeNav() {
+                  document.getElementById("mySidenav").style.width = "0";
+                  document.getElementById("li").style.display='block';
+                  document.getElementById("mySidenav").style.display = "none";
+                  
+                 
+              
+                }
+        </script>
+        <style>
+            
+            @media screen and (min-width: 700px) {
+            .img{
+                display: none;
+            }
+
+            }
+            .closebtn {
+            position: absolute;
+            display: block;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            }
+            .cards{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 2rem;
+                margin-top: 1rem;
+            }
+            .card-single{
+                display:flex;
+                justify-content: space-between;
+                background:rgba(255, 255, 255,0.2);
+                padding: 2rem;
+                border-radius: 10px;
+                color:black;
+        
+            }
+            .h1{
+                color:#000;
+            }
+            .card-single span:last-child{
+                color: rgba(21, 22, 22, 0.842);
+
+            }
+            .card-single span:last-child{
+                font-size:2rem;
+                
+            }
+            .graph-card{
+                display: flex;
+                background: rgba(255, 255, 255,0.2);
+                border-radius: 10px;
+                grid-row: 1;
+                grid-gap:1rem;
+                margin-top: 10px;
+
+            }
+            .graph-content{
+                border-radius: 10px;
+                box-shadow: var(--shadow);
+                padding: 2rem;
+            }
+            
+            
+        </style>
+
+
+        <body>
+            <div class="head">
+                <nav class="navbar navbar-expand-lg navbar-dark"> 
+                    <a href="#" class="navbar-brand">
+                        <img src="C:\Users\Acer\OneDrive - Softwarica College\Desktop\chhatrabas\chhatra\statics\img\logo.png" height="50" alt="CoolBrand">
+                    </a>
+                    <a class="navbar-brand" href="#" style="font-size: 50px;color: aliceblue; font-family:'Brush Script MT',cursive;">Chhatrabas</a>  
+              
+                </nav>
+            </div>
+            <div class="container-fluid">
+                <div class="mySidenav" >
+                <span style="font-size:30px;cursor:pointer;display:none; color: #fff;" id="li" onclick="openNav()">&#9776;</span>
+                <div class="col-lg-2 left" id="mySidenav" >
+                  <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="mySidenav">
+                        <ul class="navbar-nav"> 
+                               <li class="nav-item">  
+                                <a class="nav-link"  id="btn3" href="#"  onclick="myFunction(id)" href="#" style="color:red;">Home</a>  
+                               </li>   
+                               <li class="nav-item">  
+                                <a class="nav-link" id="btn1" href="#" onclick="myFunction(id)" style="color: rgb(240, 248, 255); ">Hostel Profile</a>  
+                               </li>  
+                               <li class="nav-item">  
+                                <a class="nav-link" id="btn2" href="#" onclick="myFunction(id)" style="color: aliceblue;">Available Rooms</a>  
+                               </li>    
+                               <li class="nav-item">  
+                                 <a class="nav-link"  id="btn3" href="#"  onclick="myFunction(id)"style="color: aliceblue; ">Bookings</a>  
+                                </li>    
+                              </ul>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-9 main" style="float:left; position:fluid; margin-top:10px;">
+                    <main>
+                        <div class="cards">
+                            <div class="card-single">
+                                <div>
+                                    <h1> 14</h1>
+                                    <span> Total space</span>
+                                </div>
+                            
+                            </div>
+                            <div class="card-single">
+                                <div>
+                                    <h1> 5</h1>
+                                    <span> Occupied space</span>
+                                </div>
+                                
+                            </div>
+                            <div class="card-single">
+                                <div>
+                                    <h1> 4</h1>
+                                    <span> Available rooms</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    <div class="graph-card">
+                        <h3 class="section-head">Graph </h3>
+                        <div class="graph-content">
+                            <div class="graph-head">
+                                <div class="graph-select">
+                                    <select name="" id="">
+                                        <option value="">December</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="graph-board">
+                                <canvas id="reveneuChart">
+                        
+                                </canvas>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </main>
+                  
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+            </div>
+            
+        </body>
+</html>
